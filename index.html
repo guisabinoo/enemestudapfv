@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cronograma ENEM 2026 — v4</title>
+<style>
+  :root{
+    --bg: #f6f4ee;
+    --paper: #ffffff;
+    --ink: #20242c;
+    --ink-soft: #565f6b;
+    --line: #e1ddd1;
+    --mat: #2f6f9e;
+    --nat: #3f8558;
+    --hum: #c4632f;
+    --ling: #6b4e8e;
+    --red: #a23b3b;
+    --accent: #1b2430;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.5;
+  }
+  .wrap{ max-width:760px; margin:0 auto; padding:20px 16px 60px; }
+  h1{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.7rem;
+    margin: 4px 0 2px;
+    letter-spacing: -0.01em;
+  }
+  .sub{ color:var(--ink-soft); font-size:0.92rem; margin-bottom:20px;}
+  .card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 18px;
+    margin-bottom:16px;
+  }
+  .card h2{
+    font-family: Georgia, serif;
+    font-size:1.1rem;
+    margin:0 0 12px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .grid-summary{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:8px;
+    font-size:0.82rem;
+  }
+  .grid-summary .head{ font-weight:600; color:var(--ink-soft); border-bottom:1px solid var(--line); padding-bottom:6px;}
+  .grid-summary div{ padding:6px 4px; border-bottom:1px solid #f0eee6; }
+  .tag{
+    display:inline-block; padding:2px 8px; border-radius:20px; font-size:0.72rem; font-weight:600; color:#fff;
+  }
+  .t-mat{background:var(--mat);} .t-nat{background:var(--nat);} .t-hum{background:var(--hum);}
+  .t-ling{background:var(--ling);} .t-red{background:var(--red);}
+  table{ width:100%; border-collapse:collapse; font-size:0.85rem;}
+  th,td{ text-align:left; padding:7px 6px; border-bottom:1px solid #f0eee6; }
+  th{ color:var(--ink-soft); font-weight:600; font-size:0.78rem; }
+  .phase{ border-left:3px solid var(--accent); padding:10px 0 10px 14px; margin-bottom:10px; }
+  .phase .weeks{ font-size:0.75rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em;}
+  .phase h3{ margin:2px 0 4px; font-size:1rem; font-family:Georgia, serif;}
+  .phase p{ margin:0; font-size:0.87rem; color:var(--ink);}
+  .checkpoint{ background:#fff8e8; border:1px solid #ecd9a0; border-radius:10px; padding:10px 14px; font-size:0.85rem; margin:10px 0; }
+  details{ border:1px solid var(--line); border-radius:10px; margin-bottom:10px; overflow:hidden; background:var(--paper);}
+  summary{
+    cursor:pointer; padding:12px 14px; font-weight:600; font-size:0.95rem;
+    display:flex; justify-content:space-between; align-items:center;
+    list-style:none;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  .prog-wrap{ display:flex; align-items:center; gap:8px; font-weight:400; font-size:0.78rem; color:var(--ink-soft);}
+  .prog-bar{ width:70px; height:6px; background:#eee; border-radius:4px; overflow:hidden; }
+  .prog-fill{ height:100%; background:var(--accent); width:0%; transition:width .2s; }
+  .item-list{ padding:0 14px 14px; }
+  .item{ display:flex; align-items:flex-start; gap:8px; padding:7px 0; border-top:1px solid #f2f0e9; font-size:0.88rem;}
+  .item:first-child{ border-top:none; }
+  .item input{ margin-top:3px; }
+  .item label.done{ text-decoration:line-through; color:var(--ink-soft); }
+  .note{ font-size:0.82rem; color:var(--ink-soft); margin-top:4px; }
+  .weekday-row td:first-child{ font-weight:600; width:70px;}
+  footer{ font-size:0.8rem; color:var(--ink-soft); text-align:center; margin-top:20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Plano ENEM 2026 — 13 semanas</h1>
+  <div class="sub">De 09/08 até 15/11 · Baseado no seu diagnóstico real, não numa meta abstrata</div>
+
+  <div class="card">
+    <h2>📊 Onde você está x onde dá pra chegar</h2>
+    <div class="grid-summary">
+      <div class="head">Área</div><div class="head">Hoje</div><div class="head">Projeção nov.</div>
+      <div><span class="tag t-red">Redação</span></div><div>~620</div><div>800–850</div>
+      <div><span class="tag t-ling">Linguagens</span></div><div>~690</div><div>740–780</div>
+      <div><span class="tag t-hum">Humanas</span></div><div>~540</div><div>620–680</div>
+      <div><span class="tag t-mat">Matemática</span></div><div>~465</div><div>540–590</div>
+      <div><span class="tag t-nat">Natureza</span></div><div>~400</div><div>470–530</div>
+    </div>
+    <p class="note">Média ponderada hoje ~535 → projeção ~645-650. Corte-alvo (EACH-USP, SI noturno, EP-L1, 2026): <strong>~745</strong>. Progresso real, mas o corte específico dessa vaga fica improvável — o plano existe pra maximizar sua nota real, com checkpoint em 6 semanas pra reavaliar o alvo com dado, não com esperança.</p>
+  </div>
+
+  <div class="card">
+    <h2>⚖️ Pesos reais — Enem-USP, SI Noturno (EACH)</h2>
+    <table>
+      <tr><th>Prova</th><th>Peso</th><th>Nota mínima (eliminatória)</th></tr>
+      <tr><td><span class="tag t-mat">Matemática</span></td><td><strong>3</strong></td><td><strong>450</strong></td></tr>
+      <tr><td><span class="tag t-ling">Linguagens</span></td><td>2</td><td>400</td></tr>
+      <tr><td><span class="tag t-red">Redação</span></td><td>2</td><td>400</td></tr>
+      <tr><td><span class="tag t-nat">Natureza</span></td><td>2</td><td>350</td></tr>
+      <tr><td><span class="tag t-hum">Humanas</span></td><td>1</td><td>350</td></tr>
+    </table>
+    <div class="checkpoint" style="background:#fdeceb; border-color:#e3a49e;">
+      ⚠️ <strong>Risco real:</strong> sua estimativa atual em Matemática (~465) está perto do piso eliminatório (450). Abaixo disso, fora da vaga — não importa quão boas fiquem as outras notas. Matemática não é só a área mais fraca, é a que mais pesa (peso 3) e a que tem o piso mais alto. Prioridade #1, sem concorrência.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🗓️ Modelo semanal (13h/semana)</h2>
+    <table>
+      <tr><th>Dia</th><th>Foco</th><th>Tempo</th></tr>
+      <tr class="weekday-row"><td>Seg</td><td><span class="tag t-mat">Matemática</span></td><td>2h</td></tr>
+      <tr class="weekday-row"><td>Ter</td><td><span class="tag t-nat">Natureza</span></td><td>1,5h</td></tr>
+      <tr class="weekday-row"><td>Qua</td><td><span class="tag t-mat">Matemática</span></td><td>2h</td></tr>
+      <tr class="weekday-row"><td>Qui</td><td><span class="tag t-nat">Natureza</span></td><td>1,5h</td></tr>
+      <tr class="weekday-row"><td>Sex</td><td><span class="tag t-mat">Matemática</span> 1h + <span class="tag t-hum">Humanas</span> 0,5h + <span class="tag t-ling">Linguagens</span> 0,5h</td><td>2h</td></tr>
+      <tr class="weekday-row"><td>Sáb</td><td><span class="tag t-red">Redação</span> completa cronometrada</td><td>1,5h</td></tr>
+      <tr class="weekday-row"><td>Dom</td><td>Revisão dos erros da semana + questões mistas</td><td>1,5h</td></tr>
+    </table>
+    <p class="note">Matemática sobe pra 5h/semana (peso 3 + risco de piso eliminatório). Natureza cai pra 3h/semana — ainda relevante (peso 2), mas não mais empatada com a área de maior risco. Humanas fica enxuta de propósito: pesa só 1.</p>
+  </div>
+
+  <div class="card">
+    <h2>📆 As 4 fases</h2>
+
+    <div class="phase" style="border-color:var(--mat)">
+      <div class="weeks">Semanas 1–4 · 10/08 a 06/09</div>
+      <h3>Fase 1 — Fundamentos</h3>
+      <p>Construir do zero: Matemática e Natureza com conceito explicado, não revisão. Filosofia em Humanas. Recursos literários em Linguagens. Treino de leitura de tema em Redação.</p>
+    </div>
+
+    <div class="phase" style="border-color:var(--nat)">
+      <div class="weeks">Semanas 5–6 · 07/09 a 20/09</div>
+      <h3>Fase 2 — Aplicação inicial</h3>
+      <p>Questões por assunto nas 5 áreas, cronometradas. Primeiro banco de repertório pronto pra Redação.</p>
+    </div>
+
+    <div class="checkpoint">
+      🔍 <strong>Checkpoint — fim da semana 6 (~20/09):</strong> refazer uma amostra (15 questões/área) igual à que fizemos agora. Compara evolução real x projeção e decide se o alvo continua sendo essa vaga ou se ajustamos a mira.
+    </div>
+
+    <div class="phase" style="border-color:var(--hum)">
+      <div class="weeks">Semanas 7–11 · 21/09 a 01/11</div>
+      <h3>Fase 3 — Consolidação</h3>
+      <p>Ataque aos erros recorrentes identificados no checkpoint. Simulados parciais por área. Prova AIF-C01 cai na semana 8 (29/09) — sem sobrepor com o Enem, já que é tempo do estágio.</p>
+    </div>
+
+    <div class="phase" style="border-color:var(--red)">
+      <div class="weeks">Semanas 12–13 · 02/11 a 08/11</div>
+      <h3>Fase 4 — Simulados completos</h3>
+      <p>Ao menos 2 provas completas cronometradas (2 dias cada). Revisão final e ajuste de estratégia de prova: nunca deixar questão em branco no fim do tempo.</p>
+    </div>
+
+    <div class="phase" style="border-color:var(--accent)">
+      <div class="weeks">09/11 a 14/11 — janela entre as provas</div>
+      <h3>Reta final — só Matemática e Natureza</h3>
+      <p>Entre o dia 1 (08/11) e o dia 2 (15/11) da prova, foco 100% nessas duas áreas — é a única matéria que ainda está por vir.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>✅ Checklists por área</h2>
+    <p class="note" style="margin-bottom:10px;">Marca o que já revisou — fica salvo entre sessões.</p>
+
+    <details open>
+      <summary>
+        <span><span class="tag t-mat">Matemática</span> — prioridade 1</span>
+        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="mat"></span></span><span class="prog-text" data-group="mat">0/12</span></span>
+      </summary>
+      <div class="item-list" data-group="mat">
+        <div class="item"><input type="checkbox" data-id="mat-1"><label for="mat-1">Porcentagem e regra de três (simples e composta)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-2"><label for="mat-2">Proporcionalidade direta/inversa e escalas</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-3"><label for="mat-3">Funções do 1º grau (equação, gráfico, taxa de variação)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-4"><label for="mat-4">Funções do 2º grau (parábola, vértice, raízes)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-5"><label for="mat-5">Estatística: média, mediana, moda, gráficos</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-6"><label for="mat-6">Geometria plana: área e perímetro</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-7"><label for="mat-7">Geometria espacial básica: volume</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-8"><label for="mat-8">Progressões (PA e PG) — noções básicas</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-9"><label for="mat-9">Probabilidade básica</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-10"><label for="mat-10">Combinatória básica (princípio multiplicativo)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-11"><label for="mat-11">Trigonometria no triângulo retângulo</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-12"><label for="mat-12">Leitura de tabelas/gráficos combinada com cálculo</label></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span><span class="tag t-nat">Ciências da Natureza</span> — prioridade 1</span>
+        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="nat"></span></span><span class="prog-text" data-group="nat">0/12</span></span>
+      </summary>
+      <div class="item-list" data-group="nat">
+        <div class="item"><input type="checkbox" data-id="nat-1"><label for="nat-1">Ecologia: cadeias alimentares, ciclos, biomas brasileiros</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-2"><label for="nat-2">Genética básica (leis de Mendel)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-3"><label for="nat-3">Fisiologia humana (sistemas principais)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-4"><label for="nat-4">Saúde pública e epidemiologia</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-5"><label for="nat-5">Estequiometria básica (mol, proporções)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-6"><label for="nat-6">Funções orgânicas (identificação básica)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-7"><label for="nat-7">Química ambiental (efeito estufa, poluição)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-8"><label for="nat-8">Oxirredução (noções)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-9"><label for="nat-9">Cinemática (MRU/MRUV)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-10"><label for="nat-10">Energia: formas, conservação, potência</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-11"><label for="nat-11">Eletricidade básica (corrente, potência, circuitos)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-12"><label for="nat-12">Termologia e ondas (noções gerais)</label></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span><span class="tag t-hum">Humanas</span> — foco Filosofia</span>
+        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="hum"></span></span><span class="prog-text" data-group="hum">0/6</span></span>
+      </summary>
+      <div class="item-list" data-group="hum">
+        <div class="item"><input type="checkbox" data-id="hum-1"><label for="hum-1">Filosofia clássica: Platão e Aristóteles (formas de governo, ética)</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-2"><label for="hum-2">Contratualistas: Hobbes, Locke, Rousseau</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-3"><label for="hum-3">Direitos humanos e cidadania (Bobbio, ONU)</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-4"><label for="hum-4">Brasil república: Vargas, ditadura, redemocratização</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-5"><label for="hum-5">Geografia: urbanização, questão agrária, geopolítica</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-6"><label for="hum-6">Sociologia: movimentos sociais, desigualdade</label></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span><span class="tag t-ling">Linguagens</span> — manutenção</span>
+        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="ling"></span></span><span class="prog-text" data-group="ling">0/6</span></span>
+      </summary>
+      <div class="item-list" data-group="ling">
+        <div class="item"><input type="checkbox" data-id="ling-1"><label for="ling-1">Movimentos literários (simbolismo, parnasianismo, modernismo)</label></div>
+        <div class="item"><input type="checkbox" data-id="ling-2"><label for="ling-2">Figuras de linguagem e recursos estilísticos</label></div>
+        <div class="item"><input type="checkbox" data-id="ling-3"><label for="ling-3">Funções da linguagem</label></div>
+        <div class="item"><input type="checkbox" data-id="ling-4"><label for="ling-4">Interpretação de textos não verbais</label></div>
+        <div class="item"><input type="checkbox" data-id="ling-5"><label for="ling-5">Variação linguística e norma culta</label></div>
+        <div class="item"><input type="checkbox" data-id="ling-6"><label for="ling-6">Gêneros textuais e intertextualidade</label></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span><span class="tag t-red">Redação</span> — maior potencial de ganho</span>
+        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="red"></span></span><span class="prog-text" data-group="red">0/5</span></span>
+      </summary>
+      <div class="item-list" data-group="red">
+        <div class="item"><input type="checkbox" data-id="red-1"><label for="red-1">Treino de leitura do comando (não fugir do recorte pedido)</label></div>
+        <div class="item"><input type="checkbox" data-id="red-2"><label for="red-2">Banco de repertório por eixo (social, tecnologia, ambiente, direitos)</label></div>
+        <div class="item"><input type="checkbox" data-id="red-3"><label for="red-3">Proposta de intervenção: os 5 elementos completos</label></div>
+        <div class="item"><input type="checkbox" data-id="red-4"><label for="red-4">Conectivos e coesão entre parágrafos</label></div>
+        <div class="item"><input type="checkbox" data-id="red-5"><label for="red-5">Prática semanal de redação completa cronometrada</label></div>
+      </div>
+    </details>
+
+  </div>
+
+  <footer>Checkpoint real em ~20/09. O plano existe pra te levar ao teto possível — o resultado a gente mede com dado, não com torcida.</footer>
+</div>
+
+<script>
+(async function(){
+  const STORAGE_KEY = 'cronograma-enem-v4-checks';
+  let state = {};
+  try {
+    const res = await window.storage.get(STORAGE_KEY);
+    if (res && res.value) state = JSON.parse(res.value);
+  } catch(e) { state = {}; }
+
+  const checkboxes = document.querySelectorAll('.item input[type="checkbox"]');
+  checkboxes.forEach(cb => {
+    const id = cb.dataset.id;
+    cb.id = id;
+    if (state[id]) {
+      cb.checked = true;
+      cb.nextElementSibling.classList.add('done');
+    }
+    cb.addEventListener('change', async () => {
+      state[id] = cb.checked;
+      cb.nextElementSibling.classList.toggle('done', cb.checked);
+      updateProgress();
+      try { await window.storage.set(STORAGE_KEY, JSON.stringify(state)); }
+      catch(e) { console.error('storage error', e); }
+    });
+  });
+
+  function updateProgress(){
+    document.querySelectorAll('.item-list').forEach(list => {
+      const group = list.dataset.group;
+      const items = list.querySelectorAll('input[type="checkbox"]');
+      const total = items.length;
+      let done = 0;
+      items.forEach(i => { if(i.checked) done++; });
+      const fill = document.querySelector('.prog-fill[data-group="'+group+'"]');
+      const text = document.querySelector('.prog-text[data-group="'+group+'"]');
+      if (fill) fill.style.width = (total ? (done/total*100) : 0) + '%';
+      if (text) text.textContent = done + '/' + total;
+    });
+  }
+  updateProgress();
+})();
+</script>
+</body>
+</html>
