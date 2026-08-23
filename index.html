@@ -3,100 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cronograma ENEM 2026 — v4</title>
+<title>Plano ENEM 2026 — Guilherme</title>
 <style>
   :root{
-    --bg: #f6f4ee;
-    --paper: #ffffff;
-    --ink: #20242c;
-    --ink-soft: #565f6b;
-    --line: #e1ddd1;
-    --mat: #2f6f9e;
-    --nat: #3f8558;
-    --hum: #c4632f;
-    --ling: #6b4e8e;
-    --red: #a23b3b;
-    --accent: #1b2430;
+    --bg:#f6f4ee;--paper:#fff;--ink:#20242c;--ink-soft:#565f6b;--line:#e1ddd1;
+    --mat:#2f6f9e;--nat:#3f8558;--hum:#c4632f;--ling:#6b4e8e;--red:#a23b3b;--accent:#1b2430;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; padding:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height:1.5;
-  }
-  .wrap{ max-width:760px; margin:0 auto; padding:20px 16px 60px; }
-  h1{
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.7rem;
-    margin: 4px 0 2px;
-    letter-spacing: -0.01em;
-  }
-  .sub{ color:var(--ink-soft); font-size:0.92rem; margin-bottom:20px;}
-  .card{
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 18px;
-    margin-bottom:16px;
-  }
-  .card h2{
-    font-family: Georgia, serif;
-    font-size:1.1rem;
-    margin:0 0 12px;
-    display:flex; align-items:center; gap:8px;
-  }
-  .grid-summary{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:8px;
-    font-size:0.82rem;
-  }
-  .grid-summary .head{ font-weight:600; color:var(--ink-soft); border-bottom:1px solid var(--line); padding-bottom:6px;}
-  .grid-summary div{ padding:6px 4px; border-bottom:1px solid #f0eee6; }
-  .tag{
-    display:inline-block; padding:2px 8px; border-radius:20px; font-size:0.72rem; font-weight:600; color:#fff;
-  }
-  .t-mat{background:var(--mat);} .t-nat{background:var(--nat);} .t-hum{background:var(--hum);}
-  .t-ling{background:var(--ling);} .t-red{background:var(--red);}
-  table{ width:100%; border-collapse:collapse; font-size:0.85rem;}
-  th,td{ text-align:left; padding:7px 6px; border-bottom:1px solid #f0eee6; }
-  th{ color:var(--ink-soft); font-weight:600; font-size:0.78rem; }
-  .phase{ border-left:3px solid var(--accent); padding:10px 0 10px 14px; margin-bottom:10px; }
-  .phase .weeks{ font-size:0.75rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em;}
-  .phase h3{ margin:2px 0 4px; font-size:1rem; font-family:Georgia, serif;}
-  .phase p{ margin:0; font-size:0.87rem; color:var(--ink);}
-  .checkpoint{ background:#fff8e8; border:1px solid #ecd9a0; border-radius:10px; padding:10px 14px; font-size:0.85rem; margin:10px 0; }
-  details{ border:1px solid var(--line); border-radius:10px; margin-bottom:10px; overflow:hidden; background:var(--paper);}
-  summary{
-    cursor:pointer; padding:12px 14px; font-weight:600; font-size:0.95rem;
-    display:flex; justify-content:space-between; align-items:center;
-    list-style:none;
-  }
-  summary::-webkit-details-marker{ display:none; }
-  .prog-wrap{ display:flex; align-items:center; gap:8px; font-weight:400; font-size:0.78rem; color:var(--ink-soft);}
-  .prog-bar{ width:70px; height:6px; background:#eee; border-radius:4px; overflow:hidden; }
-  .prog-fill{ height:100%; background:var(--accent); width:0%; transition:width .2s; }
-  .item-list{ padding:0 14px 14px; }
-  .item{ display:flex; align-items:flex-start; gap:8px; padding:7px 0; border-top:1px solid #f2f0e9; font-size:0.88rem;}
-  .item:first-child{ border-top:none; }
-  .item input{ margin-top:3px; }
-  .item label.done{ text-decoration:line-through; color:var(--ink-soft); }
-  .note{ font-size:0.82rem; color:var(--ink-soft); margin-top:4px; }
-  .weekday-row td:first-child{ font-weight:600; width:70px;}
-  footer{ font-size:0.8rem; color:var(--ink-soft); text-align:center; margin-top:20px; }
+  body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;}
+  .wrap{max-width:780px;margin:0 auto;padding:20px 16px 60px;}
+  h1{font-family:Georgia,serif;font-size:1.7rem;margin:4px 0 2px;}
+  .sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:20px;}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;}
+  .card h2{font-family:Georgia,serif;font-size:1.1rem;margin:0 0 12px;display:flex;align-items:center;gap:8px;}
+  .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:.72rem;font-weight:600;color:#fff;}
+  .t-mat{background:var(--mat);}.t-nat{background:var(--nat);}.t-hum{background:var(--hum);}.t-ling{background:var(--ling);}.t-red{background:var(--red);}
+  table{width:100%;border-collapse:collapse;font-size:.85rem;}
+  th,td{text-align:left;padding:7px 6px;border-bottom:1px solid #f0eee6;}
+  th{color:var(--ink-soft);font-weight:600;font-size:.78rem;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:.82rem;}
+  .grid3 .head{font-weight:600;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:6px;}
+  .grid3 div{padding:6px 4px;border-bottom:1px solid #f0eee6;}
+  .note{font-size:.82rem;color:var(--ink-soft);margin-top:8px;}
+  .alert{background:#fdeceb;border:1px solid #e3a49e;border-radius:10px;padding:10px 14px;font-size:.85rem;margin:10px 0;}
+  .checkpoint-box{background:#fff8e8;border:1px solid #ecd9a0;border-radius:10px;padding:10px 14px;font-size:.85rem;margin:10px 0;}
+  .phase{border-left:3px solid var(--accent);padding:10px 0 10px 14px;margin-bottom:10px;}
+  .phase .wk{font-size:.75rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;}
+  .phase h3{margin:2px 0 4px;font-size:1rem;font-family:Georgia,serif;}
+  .phase p{margin:0;font-size:.87rem;}
+
+  /* Accordion de tópicos */
+  .topic{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden;background:var(--paper);}
+  .topic-header{cursor:pointer;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+  .topic-header:hover{background:#f9f7f2;}
+  .topic-title{font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:8px;}
+  .topic-meta{font-size:.78rem;color:var(--ink-soft);display:flex;align-items:center;gap:10px;}
+  .prog-bar{width:70px;height:6px;background:#eee;border-radius:4px;overflow:hidden;}
+  .prog-fill{height:100%;background:var(--accent);width:0%;transition:width .2s;}
+  .topic-body{display:none;padding:0 14px 14px;border-top:1px solid var(--line);}
+  .topic-body.open{display:block;}
+  .obj-box{background:#f0f4ff;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.85rem;}
+  .obj-box strong{display:block;margin-bottom:4px;color:var(--mat);}
+  .test-box{background:#f0fff4;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.85rem;}
+  .test-box strong{display:block;margin-bottom:4px;color:var(--nat);}
+  .item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-top:1px solid #f2f0e9;font-size:.88rem;}
+  .item:first-of-type{border-top:none;}
+  .item input[type=checkbox]{margin-top:3px;cursor:pointer;width:15px;height:15px;}
+  .item label{cursor:pointer;}
+  .item label.done{text-decoration:line-through;color:var(--ink-soft);}
+  .arrow{transition:transform .2s;font-size:.8rem;}
+  .arrow.open{transform:rotate(90deg);}
+  footer{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:20px;}
+  .saved-badge{font-size:.72rem;color:#3f8558;margin-left:8px;opacity:0;transition:opacity .5s;}
+  .saved-badge.show{opacity:1;}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <h1>Plano ENEM 2026</h1>
+  <div class="sub">Guilherme · 09/08 → 15/11 · Baseado no diagnóstico real <span class="saved-badge" id="badge">✓ salvo</span></div>
 
-  <h1>Plano ENEM 2026 — 13 semanas</h1>
-  <div class="sub">De 09/08 até 15/11 · Baseado no seu diagnóstico real, não numa meta abstrata</div>
-
+  <!-- DIAGNÓSTICO -->
   <div class="card">
-    <h2>📊 Onde você está x onde dá pra chegar</h2>
-    <div class="grid-summary">
+    <h2>📊 Diagnóstico x Projeção</h2>
+    <div class="grid3">
       <div class="head">Área</div><div class="head">Hoje</div><div class="head">Projeção nov.</div>
       <div><span class="tag t-red">Redação</span></div><div>~620</div><div>800–850</div>
       <div><span class="tag t-ling">Linguagens</span></div><div>~690</div><div>740–780</div>
@@ -104,211 +74,402 @@
       <div><span class="tag t-mat">Matemática</span></div><div>~465</div><div>540–590</div>
       <div><span class="tag t-nat">Natureza</span></div><div>~400</div><div>470–530</div>
     </div>
-    <p class="note">Média ponderada hoje ~535 → projeção ~645-650. Corte-alvo (EACH-USP, SI noturno, EP-L1, 2026): <strong>~745</strong>. Progresso real, mas o corte específico dessa vaga fica improvável — o plano existe pra maximizar sua nota real, com checkpoint em 6 semanas pra reavaliar o alvo com dado, não com esperança.</p>
+    <p class="note">Média hoje ~543 → projeção ~640–690. Corte-alvo EACH-USP SI Noturno EP-L1: <strong>~741</strong>. Checkpoint real em 20/09.</p>
   </div>
 
+  <!-- PESOS -->
   <div class="card">
-    <h2>⚖️ Pesos reais — Enem-USP, SI Noturno (EACH)</h2>
+    <h2>⚖️ Pesos Enem-USP — SI Noturno EACH</h2>
     <table>
-      <tr><th>Prova</th><th>Peso</th><th>Nota mínima (eliminatória)</th></tr>
+      <tr><th>Prova</th><th>Peso</th><th>Mínimo eliminatório</th></tr>
       <tr><td><span class="tag t-mat">Matemática</span></td><td><strong>3</strong></td><td><strong>450</strong></td></tr>
       <tr><td><span class="tag t-ling">Linguagens</span></td><td>2</td><td>400</td></tr>
       <tr><td><span class="tag t-red">Redação</span></td><td>2</td><td>400</td></tr>
       <tr><td><span class="tag t-nat">Natureza</span></td><td>2</td><td>350</td></tr>
       <tr><td><span class="tag t-hum">Humanas</span></td><td>1</td><td>350</td></tr>
     </table>
-    <div class="checkpoint" style="background:#fdeceb; border-color:#e3a49e;">
-      ⚠️ <strong>Risco real:</strong> sua estimativa atual em Matemática (~465) está perto do piso eliminatório (450). Abaixo disso, fora da vaga — não importa quão boas fiquem as outras notas. Matemática não é só a área mais fraca, é a que mais pesa (peso 3) e a que tem o piso mais alto. Prioridade #1, sem concorrência.
-    </div>
+    <div class="alert">⚠️ <strong>Risco real:</strong> Matemática (~465) está perto do piso eliminatório (450). Abaixo disso, fora da vaga — independente das outras notas.</div>
   </div>
 
+  <!-- MODELO SEMANAL -->
   <div class="card">
-    <h2>🗓️ Modelo semanal (13h/semana)</h2>
+    <h2>🗓️ Modelo semanal (13h)</h2>
     <table>
       <tr><th>Dia</th><th>Foco</th><th>Tempo</th></tr>
-      <tr class="weekday-row"><td>Seg</td><td><span class="tag t-mat">Matemática</span></td><td>2h</td></tr>
-      <tr class="weekday-row"><td>Ter</td><td><span class="tag t-nat">Natureza</span></td><td>1,5h</td></tr>
-      <tr class="weekday-row"><td>Qua</td><td><span class="tag t-mat">Matemática</span></td><td>2h</td></tr>
-      <tr class="weekday-row"><td>Qui</td><td><span class="tag t-nat">Natureza</span></td><td>1,5h</td></tr>
-      <tr class="weekday-row"><td>Sex</td><td><span class="tag t-mat">Matemática</span> 1h + <span class="tag t-hum">Humanas</span> 0,5h + <span class="tag t-ling">Linguagens</span> 0,5h</td><td>2h</td></tr>
-      <tr class="weekday-row"><td>Sáb</td><td><span class="tag t-red">Redação</span> completa cronometrada</td><td>1,5h</td></tr>
-      <tr class="weekday-row"><td>Dom</td><td>Revisão dos erros da semana + questões mistas</td><td>1,5h</td></tr>
+      <tr><td><strong>Seg</strong></td><td><span class="tag t-mat">Matemática</span></td><td>2h</td></tr>
+      <tr><td><strong>Ter</strong></td><td><span class="tag t-nat">Natureza</span></td><td>1,5h</td></tr>
+      <tr><td><strong>Qua</strong></td><td><span class="tag t-mat">Matemática</span></td><td>2h</td></tr>
+      <tr><td><strong>Qui</strong></td><td><span class="tag t-nat">Natureza</span></td><td>1,5h</td></tr>
+      <tr><td><strong>Sex</strong></td><td><span class="tag t-mat">Mat</span> 1h + <span class="tag t-hum">Hum</span> 0,5h + <span class="tag t-ling">Ling</span> 0,5h</td><td>2h</td></tr>
+      <tr><td><strong>Sáb</strong></td><td><span class="tag t-red">Redação</span> completa cronometrada</td><td>1,5h</td></tr>
+      <tr><td><strong>Dom</strong></td><td>Revisão de erros + questões mistas</td><td>1,5h</td></tr>
     </table>
-    <p class="note">Matemática sobe pra 5h/semana (peso 3 + risco de piso eliminatório). Natureza cai pra 3h/semana — ainda relevante (peso 2), mas não mais empatada com a área de maior risco. Humanas fica enxuta de propósito: pesa só 1.</p>
   </div>
 
+  <!-- FASES -->
   <div class="card">
-    <h2>📆 As 4 fases</h2>
-
+    <h2>📆 Fases do plano</h2>
     <div class="phase" style="border-color:var(--mat)">
-      <div class="weeks">Semanas 1–4 · 10/08 a 06/09</div>
+      <div class="wk">Semanas 1–4 · 10/08 a 06/09</div>
       <h3>Fase 1 — Fundamentos</h3>
-      <p>Construir do zero: Matemática e Natureza com conceito explicado, não revisão. Filosofia em Humanas. Recursos literários em Linguagens. Treino de leitura de tema em Redação.</p>
+      <p>Base do zero em Mat e Nat. Filosofia em Humanas. Recursos literários em Linguagens. Estrutura básica de redação.</p>
     </div>
-
     <div class="phase" style="border-color:var(--nat)">
-      <div class="weeks">Semanas 5–6 · 07/09 a 20/09</div>
-      <h3>Fase 2 — Aplicação inicial</h3>
-      <p>Questões por assunto nas 5 áreas, cronometradas. Primeiro banco de repertório pronto pra Redação.</p>
+      <div class="wk">Semanas 5–6 · 07/09 a 20/09</div>
+      <h3>Fase 2 — Aplicação</h3>
+      <p>Questões por assunto, cronometradas. Banco de repertório para redação.</p>
     </div>
-
-    <div class="checkpoint">
-      🔍 <strong>Checkpoint — fim da semana 6 (~20/09):</strong> refazer uma amostra (15 questões/área) igual à que fizemos agora. Compara evolução real x projeção e decide se o alvo continua sendo essa vaga ou se ajustamos a mira.
-    </div>
-
+    <div class="checkpoint-box">🔍 <strong>Checkpoint ~20/09:</strong> refazer amostra de 15 questões/área. Comparar evolução real x projeção. Decidir se mantém o alvo ou ajusta.</div>
     <div class="phase" style="border-color:var(--hum)">
-      <div class="weeks">Semanas 7–11 · 21/09 a 01/11</div>
+      <div class="wk">Semanas 7–11 · 21/09 a 01/11</div>
       <h3>Fase 3 — Consolidação</h3>
-      <p>Ataque aos erros recorrentes identificados no checkpoint. Simulados parciais por área. Prova AIF-C01 cai na semana 8 (29/09) — sem sobrepor com o Enem, já que é tempo do estágio.</p>
+      <p>Ataque aos erros do checkpoint. Simulados parciais. AWS AIF-C01 em 29/09 (tempo do estágio, não compete com o ENEM).</p>
     </div>
-
     <div class="phase" style="border-color:var(--red)">
-      <div class="weeks">Semanas 12–13 · 02/11 a 08/11</div>
+      <div class="wk">Semanas 12–13 · 02/11 a 08/11</div>
       <h3>Fase 4 — Simulados completos</h3>
-      <p>Ao menos 2 provas completas cronometradas (2 dias cada). Revisão final e ajuste de estratégia de prova: nunca deixar questão em branco no fim do tempo.</p>
+      <p>2 provas completas cronometradas. Nunca deixar questão em branco no fim do tempo.</p>
     </div>
-
     <div class="phase" style="border-color:var(--accent)">
-      <div class="weeks">09/11 a 14/11 — janela entre as provas</div>
-      <h3>Reta final — só Matemática e Natureza</h3>
-      <p>Entre o dia 1 (08/11) e o dia 2 (15/11) da prova, foco 100% nessas duas áreas — é a única matéria que ainda está por vir.</p>
+      <div class="wk">09/11 a 14/11 — entre as provas</div>
+      <h3>Reta final — só Mat e Nat</h3>
+      <p>Foco 100% nas matérias do dia 2 (15/11).</p>
     </div>
   </div>
 
+  <!-- TÓPICOS COM OBJETIVOS -->
   <div class="card">
-    <h2>✅ Checklists por área</h2>
-    <p class="note" style="margin-bottom:10px;">Marca o que já revisou — fica salvo entre sessões.</p>
+    <h2>✅ Tópicos, objetivos e testes de saída</h2>
+    <p class="note" style="margin-bottom:12px;">Cada tópico tem: quanto tempo dedicar, o que você deve saber fazer ao final, e como testar se aprendeu. Marque só quando passar no teste de saída.</p>
 
-    <details open>
-      <summary>
-        <span><span class="tag t-mat">Matemática</span> — prioridade 1</span>
-        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="mat"></span></span><span class="prog-text" data-group="mat">0/12</span></span>
-      </summary>
-      <div class="item-list" data-group="mat">
-        <div class="item"><input type="checkbox" data-id="mat-1"><label for="mat-1">Porcentagem e regra de três (simples e composta)</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-2"><label for="mat-2">Proporcionalidade direta/inversa e escalas</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-3"><label for="mat-3">Funções do 1º grau (equação, gráfico, taxa de variação)</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-4"><label for="mat-4">Funções do 2º grau (parábola, vértice, raízes)</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-5"><label for="mat-5">Estatística: média, mediana, moda, gráficos</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-6"><label for="mat-6">Geometria plana: área e perímetro</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-7"><label for="mat-7">Geometria espacial básica: volume</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-8"><label for="mat-8">Progressões (PA e PG) — noções básicas</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-9"><label for="mat-9">Probabilidade básica</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-10"><label for="mat-10">Combinatória básica (princípio multiplicativo)</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-11"><label for="mat-11">Trigonometria no triângulo retângulo</label></div>
-        <div class="item"><input type="checkbox" data-id="mat-12"><label for="mat-12">Leitura de tabelas/gráficos combinada com cálculo</label></div>
+    <!-- MATEMÁTICA -->
+    <div id="grp-mat">
+    <div style="font-weight:700;font-size:.8rem;color:var(--mat);text-transform:uppercase;letter-spacing:.05em;margin:14px 0 6px;">Matemática — 5h/semana</div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('mat-1')">
+        <div class="topic-title"><span class="tag t-mat">Mat</span> Porcentagem e Regra de Três</div>
+        <div class="topic-meta"><span id="prog-mat-1-text">0/3</span><div class="prog-bar"><div class="prog-fill" id="prog-mat-1"></div></div><span class="arrow" id="arrow-mat-1">▶</span></div>
       </div>
-    </details>
-
-    <details>
-      <summary>
-        <span><span class="tag t-nat">Ciências da Natureza</span> — prioridade 1</span>
-        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="nat"></span></span><span class="prog-text" data-group="nat">0/12</span></span>
-      </summary>
-      <div class="item-list" data-group="nat">
-        <div class="item"><input type="checkbox" data-id="nat-1"><label for="nat-1">Ecologia: cadeias alimentares, ciclos, biomas brasileiros</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-2"><label for="nat-2">Genética básica (leis de Mendel)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-3"><label for="nat-3">Fisiologia humana (sistemas principais)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-4"><label for="nat-4">Saúde pública e epidemiologia</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-5"><label for="nat-5">Estequiometria básica (mol, proporções)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-6"><label for="nat-6">Funções orgânicas (identificação básica)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-7"><label for="nat-7">Química ambiental (efeito estufa, poluição)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-8"><label for="nat-8">Oxirredução (noções)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-9"><label for="nat-9">Cinemática (MRU/MRUV)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-10"><label for="nat-10">Energia: formas, conservação, potência</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-11"><label for="nat-11">Eletricidade básica (corrente, potência, circuitos)</label></div>
-        <div class="item"><input type="checkbox" data-id="nat-12"><label for="nat-12">Termologia e ondas (noções gerais)</label></div>
+      <div class="topic-body" id="body-mat-1">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 4h (2 sessões de 2h)</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Resolver qualquer questão de regra de três simples (direta/inversa), composta e porcentagem sem calculadora, identificando as grandezas antes de montar a conta.</div>
+        <div class="test-box"><strong>✔ Teste de saída — você deve conseguir responder:</strong><br>1. 8 máquinas produzem 480 peças em 6 dias. Quantas peças 12 máquinas produzem em 4 dias?<br>2. Um produto foi reduzido em 30% e passou a custar R$140. Qual era o preço original?</div>
+        <div class="item"><input type="checkbox" data-id="mat-1a"><label>Regra de três simples (direta e inversa) — identificação de grandezas + produto constante</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-1b"><label>Regra de três composta — método de colunas + simplificação cruzada</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-1c"><label>Porcentagem direta e reversa (achar o valor original)</label></div>
       </div>
-    </details>
+    </div>
 
-    <details>
-      <summary>
-        <span><span class="tag t-hum">Humanas</span> — foco Filosofia</span>
-        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="hum"></span></span><span class="prog-text" data-group="hum">0/6</span></span>
-      </summary>
-      <div class="item-list" data-group="hum">
-        <div class="item"><input type="checkbox" data-id="hum-1"><label for="hum-1">Filosofia clássica: Platão e Aristóteles (formas de governo, ética)</label></div>
-        <div class="item"><input type="checkbox" data-id="hum-2"><label for="hum-2">Contratualistas: Hobbes, Locke, Rousseau</label></div>
-        <div class="item"><input type="checkbox" data-id="hum-3"><label for="hum-3">Direitos humanos e cidadania (Bobbio, ONU)</label></div>
-        <div class="item"><input type="checkbox" data-id="hum-4"><label for="hum-4">Brasil república: Vargas, ditadura, redemocratização</label></div>
-        <div class="item"><input type="checkbox" data-id="hum-5"><label for="hum-5">Geografia: urbanização, questão agrária, geopolítica</label></div>
-        <div class="item"><input type="checkbox" data-id="hum-6"><label for="hum-6">Sociologia: movimentos sociais, desigualdade</label></div>
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('mat-2')">
+        <div class="topic-title"><span class="tag t-mat">Mat</span> Decimais e Operações Básicas</div>
+        <div class="topic-meta"><span id="prog-mat-2-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-mat-2"></div></div><span class="arrow" id="arrow-mat-2">▶</span></div>
       </div>
-    </details>
-
-    <details>
-      <summary>
-        <span><span class="tag t-ling">Linguagens</span> — manutenção</span>
-        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="ling"></span></span><span class="prog-text" data-group="ling">0/6</span></span>
-      </summary>
-      <div class="item-list" data-group="ling">
-        <div class="item"><input type="checkbox" data-id="ling-1"><label for="ling-1">Movimentos literários (simbolismo, parnasianismo, modernismo)</label></div>
-        <div class="item"><input type="checkbox" data-id="ling-2"><label for="ling-2">Figuras de linguagem e recursos estilísticos</label></div>
-        <div class="item"><input type="checkbox" data-id="ling-3"><label for="ling-3">Funções da linguagem</label></div>
-        <div class="item"><input type="checkbox" data-id="ling-4"><label for="ling-4">Interpretação de textos não verbais</label></div>
-        <div class="item"><input type="checkbox" data-id="ling-5"><label for="ling-5">Variação linguística e norma culta</label></div>
-        <div class="item"><input type="checkbox" data-id="ling-6"><label for="ling-6">Gêneros textuais e intertextualidade</label></div>
+      <div class="topic-body" id="body-mat-2">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h (1 sessão)</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Somar, subtrair, multiplicar e dividir números decimais no papel, sem calculadora, em menos de 2 minutos por conta.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>1. 3,14 × 2,5 = ?<br>2. 12,6 ÷ 0,3 = ?<br>3. 4,75 + 3,8 − 1,25 = ?</div>
+        <div class="item"><input type="checkbox" data-id="mat-2a"><label>Soma e subtração de decimais (alinhar vírgula)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-2b"><label>Multiplicação e divisão de decimais (regra da vírgula)</label></div>
       </div>
-    </details>
+    </div>
 
-    <details>
-      <summary>
-        <span><span class="tag t-red">Redação</span> — maior potencial de ganho</span>
-        <span class="prog-wrap"><span class="prog-bar"><span class="prog-fill" data-group="red"></span></span><span class="prog-text" data-group="red">0/5</span></span>
-      </summary>
-      <div class="item-list" data-group="red">
-        <div class="item"><input type="checkbox" data-id="red-1"><label for="red-1">Treino de leitura do comando (não fugir do recorte pedido)</label></div>
-        <div class="item"><input type="checkbox" data-id="red-2"><label for="red-2">Banco de repertório por eixo (social, tecnologia, ambiente, direitos)</label></div>
-        <div class="item"><input type="checkbox" data-id="red-3"><label for="red-3">Proposta de intervenção: os 5 elementos completos</label></div>
-        <div class="item"><input type="checkbox" data-id="red-4"><label for="red-4">Conectivos e coesão entre parágrafos</label></div>
-        <div class="item"><input type="checkbox" data-id="red-5"><label for="red-5">Prática semanal de redação completa cronometrada</label></div>
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('mat-3')">
+        <div class="topic-title"><span class="tag t-mat">Mat</span> Estatística: média, mediana, moda e gráficos</div>
+        <div class="topic-meta"><span id="prog-mat-3-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-mat-3"></div></div><span class="arrow" id="arrow-mat-3">▶</span></div>
       </div>
-    </details>
+      <div class="topic-body" id="body-mat-3">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h (1 sessão)</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Calcular média, mediana e moda de um conjunto de dados e interpretar gráficos de barras, linhas e pizza em questões do ENEM.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Dado o conjunto {4, 7, 7, 9, 3, 5}: qual a média, mediana e moda?</div>
+        <div class="item"><input type="checkbox" data-id="mat-3a"><label>Média aritmética (e ponderada básica)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-3b"><label>Mediana e moda + leitura de gráficos</label></div>
+      </div>
+    </div>
 
-  </div>
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('mat-4')">
+        <div class="topic-title"><span class="tag t-mat">Mat</span> Funções do 1º e 2º grau</div>
+        <div class="topic-meta"><span id="prog-mat-4-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-mat-4"></div></div><span class="arrow" id="arrow-mat-4">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-mat-4">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 4h (2 sessões)</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Identificar uma função pelo enunciado, montar a equação e resolver — sem precisar decorar fórmula de cor, entendendo o raciocínio.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>1. Um táxi cobra R$5 de bandeirada + R$2,50/km. Quantos km para a corrida custar R$30?<br>2. Uma bola é lançada e sua altura é h = −t² + 4t. Qual a altura máxima e quando ocorre?</div>
+        <div class="item"><input type="checkbox" data-id="mat-4a"><label>Função do 1º grau: equação, gráfico, taxa de variação</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-4b"><label>Função do 2º grau: parábola, vértice, raízes (Bhaskara básico)</label></div>
+      </div>
+    </div>
 
-  <footer>Checkpoint real em ~20/09. O plano existe pra te levar ao teto possível — o resultado a gente mede com dado, não com torcida.</footer>
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('mat-5')">
+        <div class="topic-title"><span class="tag t-mat">Mat</span> Geometria plana e espacial</div>
+        <div class="topic-meta"><span id="prog-mat-5-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-mat-5"></div></div><span class="arrow" id="arrow-mat-5">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-mat-5">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 3h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Calcular área e perímetro das figuras mais cobradas no ENEM (triângulo, retângulo, círculo) e volume de cubo, cilindro e caixa.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Um círculo tem raio 7cm. Qual sua área? (use π≈3,14)</div>
+        <div class="item"><input type="checkbox" data-id="mat-5a"><label>Área e perímetro (triângulo, retângulo, círculo, trapézio)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-5b"><label>Volume básico (cubo, paralelepípedo, cilindro)</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('mat-6')">
+        <div class="topic-title"><span class="tag t-mat">Mat</span> Probabilidade e Combinatória</div>
+        <div class="topic-meta"><span id="prog-mat-6-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-mat-6"></div></div><span class="arrow" id="arrow-mat-6">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-mat-6">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 3h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Calcular probabilidade simples e usar o princípio multiplicativo para contar arranjos — as duas formas mais cobradas no ENEM.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>1. Numa urna com 4 bolas vermelhas e 6 azuis, qual a prob. de tirar vermelha?<br>2. De quantas formas posso montar um código com 3 letras distintas do alfabeto (26 letras)?</div>
+        <div class="item"><input type="checkbox" data-id="mat-6a"><label>Probabilidade básica (espaço amostral, eventos)</label></div>
+        <div class="item"><input type="checkbox" data-id="mat-6b"><label>Princípio multiplicativo de contagem</label></div>
+      </div>
+    </div>
+    </div>
+
+    <!-- NATUREZA -->
+    <div style="font-weight:700;font-size:.8rem;color:var(--nat);text-transform:uppercase;letter-spacing:.05em;margin:18px 0 6px;">Ciências da Natureza — 3h/semana</div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('nat-1')">
+        <div class="topic-title"><span class="tag t-nat">Bio</span> Ecologia e Biomas</div>
+        <div class="topic-meta"><span id="prog-nat-1-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-nat-1"></div></div><span class="arrow" id="arrow-nat-1">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-nat-1">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Identificar produtores, consumidores e decompositores; calcular energia em qualquer nível da cadeia; nomear os 6 biomas brasileiros pela característica.</div>
+        <div class="test-box"><strong>✔ Teste de saída (já passou ✅):</strong><br>Cadeia com 5 níveis, produtor com 100.000u → quanto no topo? Qual bioma é exclusivo do Brasil?</div>
+        <div class="item"><input type="checkbox" data-id="nat-1a"><label>Cadeia alimentar, fluxo de energia, decompositores ✅</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-1b"><label>6 biomas brasileiros e características ✅</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('nat-2')">
+        <div class="topic-title"><span class="tag t-nat">Bio</span> Genética básica — Leis de Mendel</div>
+        <div class="topic-meta"><span id="prog-nat-2-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-nat-2"></div></div><span class="arrow" id="arrow-nat-2">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-nat-2">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 3h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Montar um cruzamento genético simples (quadro de Punnett) e calcular a proporção de descendentes com determinada característica.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Dois pais heterozigotos (Aa × Aa) têm filhos. Qual a proporção de filhos dominantes homozigóticos, heterozigotos e recessivos?</div>
+        <div class="item"><input type="checkbox" data-id="nat-2a"><label>1ª Lei de Mendel: dominância, recessividade, quadro de Punnett</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-2b"><label>2ª Lei de Mendel: diibridismo básico (proporção 9:3:3:1)</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('nat-3')">
+        <div class="topic-title"><span class="tag t-nat">Bio</span> Fisiologia humana e Saúde</div>
+        <div class="topic-meta"><span id="prog-nat-3-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-nat-3"></div></div><span class="arrow" id="arrow-nat-3">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-nat-3">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Identificar a função dos principais sistemas do corpo humano e reconhecer doenças/condições associadas a cada um em questões do ENEM.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Qual sistema é responsável pela troca gasosa? O que é uma doença autoimune?</div>
+        <div class="item"><input type="checkbox" data-id="nat-3a"><label>Sistemas: circulatório, respiratório, digestório, nervoso</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-3b"><label>Saúde pública: vacinas, epidemiologia, doenças prevalentes no Brasil</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('nat-4')">
+        <div class="topic-title"><span class="tag t-nat">Fís</span> Cinemática e Energia</div>
+        <div class="topic-meta"><span id="prog-nat-4-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-nat-4"></div></div><span class="arrow" id="arrow-nat-4">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-nat-4">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 3h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Resolver questões de velocidade média, aceleração e energia cinética/potencial aplicando as fórmulas básicas sem decorá-las — entendendo o que cada variável representa.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Um carro passa de 0 a 72 km/h em 10s. Qual sua aceleração em m/s²?</div>
+        <div class="item"><input type="checkbox" data-id="nat-4a"><label>MRU e MRUV: velocidade média, aceleração, gráficos v×t</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-4b"><label>Energia: cinética, potencial, conservação, potência</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('nat-5')">
+        <div class="topic-title"><span class="tag t-nat">Fís</span> Eletricidade básica</div>
+        <div class="topic-meta"><span id="prog-nat-5-text">0/1</span><div class="prog-bar"><div class="prog-fill" id="prog-nat-5"></div></div><span class="arrow" id="arrow-nat-5">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-nat-5">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Calcular potência elétrica e consumo (kWh) em situações do cotidiano — tipo de questão que aparece frequentemente no ENEM.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Um chuveiro de 5500W é usado 20min/dia por 30 dias. Qual o consumo em kWh? Se o kWh custa R$0,70, quanto paga?</div>
+        <div class="item"><input type="checkbox" data-id="nat-5a"><label>Corrente, tensão, resistência (Lei de Ohm) e potência elétrica</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('nat-6')">
+        <div class="topic-title"><span class="tag t-nat">Quí</span> Química básica do ENEM</div>
+        <div class="topic-meta"><span id="prog-nat-6-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-nat-6"></div></div><span class="arrow" id="arrow-nat-6">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-nat-6">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 3h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Identificar funções orgânicas básicas por nome/estrutura e responder questões de química ambiental (efeito estufa, camada de ozônio, chuva ácida) sem cálculo.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>O que é um ácido carboxílico? Qual gás é o principal responsável pelo efeito estufa?</div>
+        <div class="item"><input type="checkbox" data-id="nat-6a"><label>Funções orgânicas: identificação básica (álcool, ácido, éster, amina)</label></div>
+        <div class="item"><input type="checkbox" data-id="nat-6b"><label>Química ambiental: efeito estufa, ozônio, chuva ácida, poluição</label></div>
+      </div>
+    </div>
+
+    <!-- HUMANAS -->
+    <div style="font-weight:700;font-size:.8rem;color:var(--hum);text-transform:uppercase;letter-spacing:.05em;margin:18px 0 6px;">Humanas — 0,5h/semana (peso 1, foco cirúrgico)</div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('hum-1')">
+        <div class="topic-title"><span class="tag t-hum">Fil</span> Filosofia clássica e contratualistas</div>
+        <div class="topic-meta"><span id="prog-hum-1-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-hum-1"></div></div><span class="arrow" id="arrow-hum-1">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-hum-1">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Distinguir as 3 formas clássicas de governo (Aristóteles), a cidade ideal de Platão, e as posições de Hobbes, Locke e Rousseau sobre o contrato social — sem confundir conceitos vizinhos.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Qual a diferença entre monarquia e tirania para Aristóteles? Para Rousseau, o que legitima o poder do Estado?</div>
+        <div class="item"><input type="checkbox" data-id="hum-1a"><label>Platão e Aristóteles: formas de governo, ética, cidade justa</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-1b"><label>Contratualistas: Hobbes (Leviatã), Locke (propriedade), Rousseau (vontade geral)</label></div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('hum-2')">
+        <div class="topic-title"><span class="tag t-hum">Hist</span> Brasil República e Direitos Humanos</div>
+        <div class="topic-meta"><span id="prog-hum-2-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-hum-2"></div></div><span class="arrow" id="arrow-hum-2">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-hum-2">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Localizar os principais eventos do Brasil República (Vargas, ditadura militar, redemocratização) numa linha do tempo e entender o conceito de direitos humanos conforme Bobbio.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>O que foi o Golpe de 1964? Por que Bobbio diz que os direitos humanos são "variáveis"?</div>
+        <div class="item"><input type="checkbox" data-id="hum-2a"><label>Era Vargas, ditadura militar (1964–1985), redemocratização</label></div>
+        <div class="item"><input type="checkbox" data-id="hum-2b"><label>Direitos humanos: Bobbio, Declaração Universal ONU, direitos sociais</label></div>
+      </div>
+    </div>
+
+    <!-- LINGUAGENS -->
+    <div style="font-weight:700;font-size:.8rem;color:var(--ling);text-transform:uppercase;letter-spacing:.05em;margin:18px 0 6px;">Linguagens — 0,5h/semana (manutenção)</div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('ling-1')">
+        <div class="topic-title"><span class="tag t-ling">Lit</span> Movimentos literários e recursos estilísticos</div>
+        <div class="topic-meta"><span id="prog-ling-1-text">0/2</span><div class="prog-bar"><div class="prog-fill" id="prog-ling-1"></div></div><span class="arrow" id="arrow-ling-1">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-ling-1">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 2h</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Identificar características do Simbolismo, Parnasianismo e Modernismo em trechos de texto e reconhecer figuras de linguagem (metáfora, metonímia, ironia, eufemismo) sem confundi-las.</div>
+        <div class="test-box"><strong>✔ Teste de saída:</strong><br>Num trecho de soneto com imagens de "pedra e mármore", qual movimento literário predomina e por quê?</div>
+        <div class="item"><input type="checkbox" data-id="ling-1a"><label>Simbolismo, Parnasianismo, Modernismo: características principais</label></div>
+        <div class="item"><input type="checkbox" data-id="ling-1b"><label>Figuras de linguagem mais cobradas no ENEM</label></div>
+      </div>
+    </div>
+
+    <!-- REDAÇÃO -->
+    <div style="font-weight:700;font-size:.8rem;color:var(--red);text-transform:uppercase;letter-spacing:.05em;margin:18px 0 6px;">Redação — Sábado (maior potencial de ganho)</div>
+
+    <div class="topic">
+      <div class="topic-header" onclick="toggle('red-1')">
+        <div class="topic-title"><span class="tag t-red">Red</span> Estrutura e as 5 competências</div>
+        <div class="topic-meta"><span id="prog-red-1-text">0/3</span><div class="prog-bar"><div class="prog-fill" id="prog-red-1"></div></div><span class="arrow" id="arrow-red-1">▶</span></div>
+      </div>
+      <div class="topic-body" id="body-red-1">
+        <div class="obj-box"><strong>⏱ Tempo estimado:</strong> 1,5h/semana (toda semana até novembro)</div>
+        <div class="obj-box"><strong>🎯 Objetivo:</strong> Escrever uma redação nota 800+ — com tese amarrada ao recorte exato do tema, 2 argumentos com repertório legitimado, e proposta de intervenção com os 5 elementos completos.</div>
+        <div class="test-box"><strong>✔ Teste de saída (semanal):</strong><br>Escrever uma redação completa em 55min e não fugir do recorte temático — avaliado pelo Claude a cada sábado.</div>
+        <div class="item"><input type="checkbox" data-id="red-1a"><label>Estrutura dos 4 parágrafos com funções fixas</label></div>
+        <div class="item"><input type="checkbox" data-id="red-1b"><label>Os 5 elementos da proposta de intervenção (agente, ação, modo, finalidade, detalhamento)</label></div>
+        <div class="item"><input type="checkbox" data-id="red-1c"><label>Banco de repertório por eixo temático (1 dado + 1 lei + 1 autor por eixo)</label></div>
+      </div>
+    </div>
+
+  </div><!-- fim card tópicos -->
+
+  <div class="checkpoint-box">🔍 <strong>Checkpoint — ~20/09:</strong> Refazer amostra de 15 questões por área (igual ao diagnóstico de agosto). Comparar com o resultado original e decidir se o alvo de 741 está no alcance ou se ajustamos a mira com dado real.</div>
+
+  <footer>O plano existe pra te levar ao teto possível — o resultado a gente mede com dado, não com torcida.</footer>
 </div>
 
 <script>
-(async function(){
-  const STORAGE_KEY = 'cronograma-enem-v4-checks';
-  let state = {};
-  try {
-    const res = await window.storage.get(STORAGE_KEY);
-    if (res && res.value) state = JSON.parse(res.value);
-  } catch(e) { state = {}; }
+// Storage com fallback pra localStorage
+const STORAGE_KEY = 'enem-guilherme-v5';
 
-  const checkboxes = document.querySelectorAll('.item input[type="checkbox"]');
-  checkboxes.forEach(cb => {
+async function loadState() {
+  // Tenta window.storage primeiro
+  try {
+    if (window.storage) {
+      const res = await window.storage.get(STORAGE_KEY);
+      if (res && res.value) return JSON.parse(res.value);
+    }
+  } catch(e) {}
+  // Fallback localStorage
+  try {
+    const s = localStorage.getItem(STORAGE_KEY);
+    if (s) return JSON.parse(s);
+  } catch(e) {}
+  return {};
+}
+
+async function saveState(state) {
+  const str = JSON.stringify(state);
+  // Salva nos dois lugares
+  try { if (window.storage) await window.storage.set(STORAGE_KEY, str); } catch(e) {}
+  try { localStorage.setItem(STORAGE_KEY, str); } catch(e) {}
+  // Badge de confirmação
+  const badge = document.getElementById('badge');
+  badge.classList.add('show');
+  setTimeout(() => badge.classList.remove('show'), 2000);
+}
+
+let state = {};
+
+function updateProgress() {
+  document.querySelectorAll('.topic-body').forEach(body => {
+    const id = body.id.replace('body-', '');
+    const checks = body.querySelectorAll('input[type=checkbox]');
+    const total = checks.length;
+    let done = 0;
+    checks.forEach(c => { if(c.checked) done++; });
+    const fill = document.getElementById('prog-' + id);
+    const text = document.getElementById('prog-' + id + '-text');
+    if (fill) fill.style.width = (total ? done/total*100 : 0) + '%';
+    if (text) text.textContent = done + '/' + total;
+  });
+}
+
+function toggle(id) {
+  const body = document.getElementById('body-' + id);
+  const arrow = document.getElementById('arrow-' + id);
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  if (arrow) arrow.classList.toggle('open', !isOpen);
+}
+
+(async function init() {
+  state = await loadState();
+  
+  document.querySelectorAll('input[type=checkbox]').forEach(cb => {
     const id = cb.dataset.id;
-    cb.id = id;
+    if (!id) return;
+    cb.id = 'cb-' + id;
+    const label = cb.nextElementSibling;
+    if (label) label.setAttribute('for', 'cb-' + id);
+    
     if (state[id]) {
       cb.checked = true;
-      cb.nextElementSibling.classList.add('done');
+      if (label) label.classList.add('done');
     }
+    
     cb.addEventListener('change', async () => {
       state[id] = cb.checked;
-      cb.nextElementSibling.classList.toggle('done', cb.checked);
+      const label = cb.nextElementSibling;
+      if (label) label.classList.toggle('done', cb.checked);
       updateProgress();
-      try { await window.storage.set(STORAGE_KEY, JSON.stringify(state)); }
-      catch(e) { console.error('storage error', e); }
+      await saveState(state);
     });
   });
-
-  function updateProgress(){
-    document.querySelectorAll('.item-list').forEach(list => {
-      const group = list.dataset.group;
-      const items = list.querySelectorAll('input[type="checkbox"]');
-      const total = items.length;
-      let done = 0;
-      items.forEach(i => { if(i.checked) done++; });
-      const fill = document.querySelector('.prog-fill[data-group="'+group+'"]');
-      const text = document.querySelector('.prog-text[data-group="'+group+'"]');
-      if (fill) fill.style.width = (total ? (done/total*100) : 0) + '%';
-      if (text) text.textContent = done + '/' + total;
-    });
-  }
+  
   updateProgress();
 })();
 </script>
